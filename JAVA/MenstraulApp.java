@@ -1,6 +1,7 @@
 import java.util.Scanner; 
 public class MenstraulApp{
 	public static void main(String[] args){
+	Scanner input = new Scanner(System.in);
 
 	System.out.print("Enter last period start day: ");
 		int lastPeriodStartDate = input.nextInt();
@@ -11,16 +12,21 @@ public class MenstraulApp{
 	System.out.print("Enter total days in the month (e.g., 30 or 31): ");
 		 int monthDays = input.nextInt();
 
+	System.out.println("\nCycle Length: " + cycleLength(lastPeriodStartDate,nextPeriodStartDate,monthDays) + " days");
+
+	System.out.println("The ovulation day is:" +ovulationDay(nextPeriodStartDate));
+
+	
 
 
 	}
 
-public static void cycleLength(int nextPeriodStartDate,int lastPeriodStartDate,int monthDays){
-
+public static int cycleLength(int nextPeriodStartDate,int lastPeriodStartDate,int monthDays){
+		int calculateCycle;
 	if (nextPeriodStartDate < lastPeriodStartDate) {
-            cycleLength = (monthDays - lastPeriodStartDate) + nextPeriodStartDate;
+            return calculateCycle = (monthDays - lastPeriodStartDate) + nextPeriodStartDate;
         } else {
-            cycleLength = nextPeriodStartDate - lastPeriodStartDate;
+           return calculateCycle = nextPeriodStartDate - lastPeriodStartDate;
         }
 		
 			
@@ -29,7 +35,7 @@ public static void cycleLength(int nextPeriodStartDate,int lastPeriodStartDate,i
 }
 
 public static int ovulationDay(int nextPeriodStartDate){
-		ovulationDay =  nextPeriodStartDate - 14;
+		int ovulationDay =  nextPeriodStartDate - 14;
 			return ovulationDay; 
 
 }
@@ -45,7 +51,7 @@ public static void safeDays(int lastPeriodStartDate,int nextPeriodStartDate){
 
  System.out.println("Safe Days Before Ovulation: Day " + Startsafe + " to " + EndSafe);
 
-System.out.println("Safe Days After Ovulation: Day " + postOvulationStartsafe + " to " + postOvulationEndSafe);
+System.out.println("Safe Days After Ovulation: Day " + postOvalStartsafe + " to " + postOvalEndSafe);
 
 
 

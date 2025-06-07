@@ -16,17 +16,19 @@ public class MenstraulApp{
 
 	System.out.println("The ovulation day is:" +ovulationDay(nextPeriodStartDate));
 
+			safeDays(lastPeriodStartDate, nextPeriodStartDate);
+
 	
 
 
 	}
 
-public static int cycleLength(int nextPeriodStartDate,int lastPeriodStartDate,int monthDays){
-		int calculateCycle;
+public static int cycleLength(int lastPeriodStartDate,int nextPeriodStartDate,int monthDays){
+		
 	if (nextPeriodStartDate < lastPeriodStartDate) {
-            return calculateCycle = (monthDays - lastPeriodStartDate) + nextPeriodStartDate;
+            return  (monthDays - lastPeriodStartDate) + nextPeriodStartDate;
         } else {
-           return calculateCycle = nextPeriodStartDate - lastPeriodStartDate;
+           return nextPeriodStartDate - lastPeriodStartDate;
         }
 		
 			
@@ -35,9 +37,9 @@ public static int cycleLength(int nextPeriodStartDate,int lastPeriodStartDate,in
 }
 
 public static int ovulationDay(int nextPeriodStartDate){
-		int ovulationDay =  nextPeriodStartDate - 14;
-			return ovulationDay; 
+		 return nextPeriodStartDate - 14;
 
+			
 }
 
 

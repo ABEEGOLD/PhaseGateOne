@@ -1,55 +1,29 @@
 
-def MenstraulApp():
-	
-	
-		
-	def cycleLength( next_Period_Start_Date, last_Period_Start_Date,month_Days):
+def cycleLength(lastPeriodStartDate, nextPeriodStartDate, monthDays):
+    if nextPeriodStartDate < lastPeriodStartDate:
+        return (monthDays - lastPeriodStartDate) + nextPeriodStartDate
+    else:
+        return nextPeriodStartDate - lastPeriodStartDate
 
-		if next_Period_Start_Date < last_Period_Start_Date:
-			return (month_Days - last_Period_Start_Date) + next_Period_Start_Date
-		else:
-			return next_Period_Start_Date - last_Period_Start_Date;
+def ovulationDay(nextPeriodStartDate):
+    return nextPeriodStartDate - 14
 
-		
-			
-def ovulation_Day(next_Period_Start_Date):
-		return next_Period_Start_Date - 14
-	
+def safeDays(lastPeriodStartDate, nextPeriodStartDate):
+    ovalDay = ovulationDay(nextPeriodStartDate)
+    startSafe = lastPeriodStartDate
+    endSafe = ovalDay - 6
+    postOvalStartSafe = ovalDay + 2
+    postOvalEndSafe = nextPeriodStartDate - 1
 
+    print(f"Safe Days Before Ovulation: Day {startSafe} to {endSafe}")
+    print(f"Safe Days After Ovulation: Day {postOvalStartSafe} to {postOvalEndSafe}")
 
+# Example Inputs
+lastPeriodStartDate = int(input("Enter last period start day: "))
+nextPeriodStartDate = int(input("Enter next period start day: "))
+monthDays = int(input("Enter total days in the month (e.g., 30 or 31): "))
 
+print(f"\nCycle Length: {cycleLength(lastPeriodStartDate, nextPeriodStartDate, monthDays)} days")
+print(f"The ovulation day is: Day {ovulationDay(nextPeriodStartDate)}")
 
-def safe_Days(last_Period_Start_Date, next_Period_Start_Date):
-    oval_Day = ovulation_Day(next_Period_Start_Date)  
-
-   
-    
-    Start_safe = last_Period_Start_Date
-
-    End_Safe = oval_Day - 6
-    post_Oval_Start_safe = oval_Day + 2
-    post_Oval_End_Safe = next_Period_Start_Date - 1
-
-
-    
-print(f"Start_safe Days Before Ovulation : Day {Start_safe} to {End_Safe}")
-print(f"Safe Days After Ovulation: Day {post_Oval_Start_safe} to {post_Oval_End_Safe}")
-
-last_Period_Start_Date = int(input("Enter last period start day: "))
-next_Period_Start_Date = int(input("Enter next period start day: "))
-month_Days = int(input("Enter total days in the month (e.g., 30 or 31): "))
-
-print("\nCycle Length: " + cycleLength(lastPeriodStartDate,nextPeriodStartDate,monthDays) + " days");
-
-print("The ovulation day is:" +ovulationDay(nextPeriodStartDate));
-
-safeDays(lastPeriodStartDate, nextPeriodStartDate);
-
-
-	
-	
-
-
-
-
-
+safeDays(lastPeriodStartDate, nextPeriodStartDate)

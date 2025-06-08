@@ -18,7 +18,7 @@ def safeDays(lastPeriodStartDate, nextPeriodStartDate):
     print(f"Safe Days Before Ovulation: Day {startSafe} to {endSafe}")
     print(f"Safe Days After Ovulation: Day {postOvalStartSafe} to {postOvalEndSafe}")
 
-# Example Inputs
+
 lastPeriodStartDate = int(input("Enter last period start day: "))
 nextPeriodStartDate = int(input("Enter next period start day: "))
 monthDays = int(input("Enter total days in the month (e.g., 30 or 31): "))

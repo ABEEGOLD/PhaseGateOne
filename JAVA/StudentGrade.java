@@ -1,45 +1,41 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 public class StudentGrade{
 	public static void main(String[] args){
 		Scanner input = new Scanner(System.in);
 		
-	ArrayList<Integer> studentNumber = new ArrayList<>();
-	ArrayList<Integer> subjectNumber = new ArrayList<>();
+	int numberOfStudent;
+	int numberOfSubject;
 
 
-while(true){
-	System.pout.print("How many student do you have?: ");
-	int NumberOfStudent = input.nextInt(); 
-	studentNumber.add(NumberOfStudent);
 
-	System.out.print("How many subject do they offer?: ");
-	int numberOfSubject = input.nextInt();
-	subjectNumber.add(numberOfSubject);
+	System.out.print("How many students do you have?: ");
+	numberOfStudent = input.nextInt();
 
-	int sudentCount = Student 1, Student 2, Student 3, Student 4;
-	int Student 1 = SUB1,SUB2,SUB3;
+	System.out.print("How many subjects do they offer?: ");
+	numberOfSubject = input.nextInt();
 
-	int TOT =   
-
+	
+    for (int i = 0; i < studentNumber.size(); i++) {
+    int totalStudent = subjectNumber.get(i) * studentNumber.get(i);
+    System.out.printf("%-20s %10d %10.2f %15.2f%n", subjectNumber.get(i), studentNumber.get(i), totalStudent);
 }
 	
 
-	System.out.print("\n======================================================\n");
+    for (int i = 1; i <= numberOfStudent; i++) {
+    System.out.printf("Student %d%n", i);
+}
 
-	System.out.print("STUDENT",  "SUB1",  "SUB2",  "SUB3",  "TOT",  "AVE",  "POS");
-		System.out.print("\n======================================================\n");
-	System.out.print("Student 1");
-	System.out.print("Student 2");
-	System.out.print("Student 3");
-	System.out.print("Student 4");
+	System.out.print("\n==========================================================================\n");
+
+	System.out.printf("%-10s %10s %10s %10s %10s %10s%n", "STUDENT", "SUB1", "SUB2", "SUB3", "TOT", "AVE", "POS");
+	System.out.println("\n==========================================================================\n");
+	System.out.println("Student 1");
+	System.out.println("Student 2");
+	System.out.println("Student 3");
+	System.out.println("Student 4");
 
 
 
-for (int i = 0; i < studentNumber.size(); i++) {
-        	int totalStudent = subjectNumber.get(i) * amountPerUnit.get(i);
-            	System.out.printf("%-20s %10d %10.2f %15.2f%n",itemBought.get(i), numOfProduct.get(i), amountPerUnit.get(i), totalItemPrice);
-        }
 
 
 

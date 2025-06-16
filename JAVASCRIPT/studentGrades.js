@@ -23,7 +23,7 @@ function studentGrades() {
     console.log("STUDENT".(10), "");
 
     for (let i = 1; i <= numberOfSubjects; i++) {
-        process.stdout.write("SUB" + i.(10));
+        console.log("SUB" + i.(10));
     }
 
     console.log("TOT".(10), "AVE".(10), "POS".(10));

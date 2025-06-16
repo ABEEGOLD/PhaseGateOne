@@ -26,7 +26,7 @@ function studentGrades() {
         process.stdout.write("SUB" + i.(10));
     }
 
-    console.log("TOT".padStart(10), "AVE".(10), "POS".(10));
+    console.log("TOT".(10), "AVE".(10), "POS".(10));
     console.log("==========================================================================");
 
     for (let i = 1; i <= numberOfStudents; i++) {

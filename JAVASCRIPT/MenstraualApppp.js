@@ -30,4 +30,4 @@ function safeDays(lastPeriodStartDate, nextPeriodStartDate) {
 console.log("\nCycle Length: " + cycleLength(lastPeriodStartDate, nextPeriodStartDate, monthDays) + " days");
 console.log("The ovulation day is: Day " + ovulationDay(nextPeriodStartDate));
 
-safeDays(lastPeriodStartDate, nextPeriodStartDate);
+safeDays(lastPeriodStartDate, nextPeriodStartDate);  

@@ -28,6 +28,22 @@ public class StudentGrade {
         }
 	}
 
+	int highestScore = 0;
+	int lowestScore = 0;
+	int numberOfPasses = 0;
+	int numberFails = 0;
+	
+	if(totalScores > highestScore){
+	highestScore = totalScores;
+	 numberOfPasses = scores;
+	}
+
+	if(totalScores < lowestScore){ 
+		lowestScore = totalScores;
+		numberFails = scores;
+		totalScores = scores;
+	}
+
 	System.out.println("\n==========================================================================");
         System.out.printf("%-10s", "STUDENT");
 
@@ -42,6 +58,16 @@ public class StudentGrade {
             System.out.printf("Student %-5d%n", i);
         }
 	 System.out.printf("%10d %10.2f %10d%n", totalScores, averageScores, positions);
+	
+	System.out.println("Highest scoring student is:"+highestScore);
+	System.out.print("Lowest scoring student is:"+lowestScore);
+	System.out.print("Total score is:"totalScores);
+	System.out.print("Average score is:"+averageScores);
+	System.out.print("Number of passes:"+numberOfPasses);
+	System.out.print("Number of fails:"+numberFails);
+
+
+
 
     }
 }

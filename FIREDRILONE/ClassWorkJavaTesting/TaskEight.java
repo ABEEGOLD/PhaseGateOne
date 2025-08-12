@@ -4,18 +4,27 @@ public class TaskEight{
 		Scanner input = new Scanner(System.in);
 
 		int sum = 0;
+		int count = 0;
 
-	for(int index = 1; index <= 10;index++){
+	while(count <= 10){
 		System.out.print("Enter number score:");
 		int number = input.nextInt();
 
-		if(number < 0 && number <= 100){
+		if(number < 0 || number > 100){
 		System.out.print("Invalid number");
+		
+		}else{
+		sum += number;
+		count++;
+		
+
+		if(count == 10){
+		  break;
+		}
 		}
 
-		sum += number;	
-		System.out.println("The sum of number greater than 100:"+sum);
-		}
-
+		}	
+		System.out.println("The sum of number equal to 100:"+sum);
+		
 	}
 }

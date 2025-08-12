@@ -14,5 +14,8 @@ public class TaskEight{
 		}
 
 		sum += number;	
-	} 
-		System.out.println(sum);
+		System.out.println("The sum of number greater than 100:"+sum);
+		}
+
+	}
+}

@@ -5,14 +5,14 @@ public class TaskFive{
 		
 		int sum = 0;
 		
-		for(int score = 0; score < 10;score++);
+		for(int count = 1; count<= 10;count++){
 		System.out.print("Enter ten scores:");
 		int number = input.nextInt();
 		
 		if(number % 2 == 0){
 		sum += number;
 		}
-		System.out.println(sum);
+		System.out.println("The sum of the even number is:"+sum);
 		}
 	}
 }
